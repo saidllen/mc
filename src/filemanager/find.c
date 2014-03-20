@@ -669,13 +669,14 @@ find_parameters (char **start_dir, ssize_t * start_dir_len,
     add_widget (find_dlg, in_with);
 
 //<<<<<<< HEAD
-    //content_use_cbox = check_new (y2++, x2, options.content_use, content_use_label);
-    //add_widget (find_dlg, content_use_cbox);
+    content_use_cbox = check_new (y2++, x2, options.content_use, content_use_label);
+    add_widget (find_dlg, content_use_cbox);
 //=======
-    cbox_position = FIND_Y - 5;
+    //cbox_position = FIND_Y - 5;
 
-    only_directories_cbox = check_new (cbox_position--, 3, options.only_directories, file_only_directories_label);
-    add_widget (find_dlg, only_directories_cbox);
+    //only_directories_cbox = check_new (cbox_position--, 3, options.only_directories, file_only_directories_label);
+	only_directories_cbox = check_new (y1++, x1, options.only_directories, file_only_directories_label);
+	add_widget (find_dlg, only_directories_cbox);
 //>>>>>>> osp/only-directories
 
     /* Continue 1st column */
